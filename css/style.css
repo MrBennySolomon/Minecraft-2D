@@ -119,43 +119,43 @@ body {
 }
 
 .dirt {
-  width: 10vw;
-  height: 10vh;
+  width: 5vw;
+  height: 5vh;
   background: url(../img/Dirt.png) no-repeat center center/cover;
 }
 
 .grass {
-  width: 10vw;
-  height: 10vw;
+  width: 5vw;
+  height: 5vh;
   background: url(../img/Grass.png) no-repeat center center/cover;
 }
 
 .stone {
-  width: 10vw;
-  height: 10vw;
+  width: 5vw;
+  height: 5vh;
   background: url(../img/stone1.png) no-repeat center center/cover;
 }
 
 .wood {
-  width: 10vw;
-  height: 10vw;
+  width: 5vw;
+  height: 5vh;
   background: url(../img/wood.png) no-repeat center center/cover;
 }
 
 .leaves {
-  width: 10vw;
-  height: 10vw;
+  width: 5vw;
+  height: 5vh;
   background: url(../img/Leaves.png) no-repeat center center/cover;
 }
 
 .sky {
-  width: 10vw;
-  height: 10vw;
+  width: 5vw;
+  height: 5vh;
   background-color: #00BFFF;
 }
 
 .cloud {
-  width: 10vw;
-  height: 10vw;
+  width: 5vw;
+  height: 5vh;
   background-color: white;
 }
