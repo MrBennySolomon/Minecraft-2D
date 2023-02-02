@@ -19,6 +19,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  width: 100vw;
+  height: 100vh;
 }
 
 .side-menu {
@@ -40,15 +43,22 @@ body {
   align-items: center;
 
   height: 100vh;
-  width: 85vw;
-  border: 2px solid black;
+  width: 100vw;
   background: url(../img/Dirt.png);
 }
 
-.real-game {
+.game {
   order: 1px solid black;
-  width: 100vmin;
-  height: 100vmin;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game-board {
+  width: 85vmin;
+  height: 85vmin;
   display: grid;
   grid-template-rows: repeat(20, 1fr);
   grid-template-columns: repeat(20, 1fr);
@@ -109,43 +119,43 @@ body {
 }
 
 .dirt {
-  width: 5vw;
-  height: 5vh;
+  width: 10vw;
+  height: 10vh;
   background: url(../img/Dirt.png) no-repeat center center/cover;
 }
 
 .grass {
-  width: 5vw;
-  height: 5vh;
+  width: 10vw;
+  height: 10vw;
   background: url(../img/Grass.png) no-repeat center center/cover;
 }
 
 .stone {
-  width: 5vw;
-  height: 5vh;
+  width: 10vw;
+  height: 10vw;
   background: url(../img/stone1.png) no-repeat center center/cover;
 }
 
 .wood {
-  width: 5vw;
-  height: 5vh;
+  width: 10vw;
+  height: 10vw;
   background: url(../img/wood.png) no-repeat center center/cover;
 }
 
 .leaves {
-  width: 5vw;
-  height: 5vh;
+  width: 10vw;
+  height: 10vw;
   background: url(../img/Leaves.png) no-repeat center center/cover;
 }
 
 .sky {
-  width: 5vw;
-  height: 5vh;
+  width: 10vw;
+  height: 10vw;
   background-color: #00BFFF;
 }
 
 .cloud {
-  width: 5vw;
-  height: 5vh;
+  width: 10vw;
+  height: 10vw;
   background-color: white;
 }

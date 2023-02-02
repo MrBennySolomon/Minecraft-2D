@@ -37,55 +37,51 @@ const cloud = document.createElement('div');
 cloud.setAttribute('class', 'cloud');
   
 
-const buttonStart = document.querySelector('.button-start');
-const mainScreen = document.querySelector('.main-screen');
+const buttonStart = document.getElementById('btn-start');
 const logoButtonStart = document.querySelector('.logo-button-start');
-const realGame = document.querySelector('.real-game');
+const gameBoard = document.getElementById('game-board');
 
 buttonStart.addEventListener('click', function() {
-  logoButtonStart.setAttribute('class', 'none');
-  mainScreen.setAttribute('class', 'real-game');
-  buildBoard();
-
+  location.href = './game.html';
 });
 
-const buildBoard = () => {
+const buildBoard = (board) => {
   for (let i = 0; i < 20; i++) {
-  
     for (let j = 0; j < 20; j++) {
-      const cell = document.createElement('div');
       for (let j = 0; j < 20; j++) {
+        const cell = document.createElement('div');
         switch (board[i][j]) {
           case 1:
             cell.classList.add('dirt');
-            realGame.appendChild(cell);
+            gameBoard.appendChild(cell);
             break;
           case 2:
             cell.classList.add('grass');
-            realGame.appendChild(cell);
+            gameBoard.appendChild(cell);
             break;
           case 3:
             cell.classList.add('leaves');
-            realGame.appendChild(cell);
+            gameBoard.appendChild(cell);
             break;
           case 4:
             cell.classList.add('stone');
-            realGame.appendChild(cell);
+            gameBoard.appendChild(cell);
             break;
           case 5:
             cell.classList.add('wood');
-            realGame.appendChild(cell);
+            gameBoard.appendChild(cell);
             break;
           case 6:
             cell.classList.add('sky');
-            realGame.appendChild(cell);
+            gameBoard.appendChild(cell);
             break;
           case 7:
             cell.classList.add('cloud');
-            realGame.appendChild(cell);
+            gameBoard.appendChild(cell);
             break;
           default:
             break;
+
         }
       }  
     } 
@@ -93,8 +89,11 @@ const buildBoard = () => {
   // document.body.appendChild(mainScreen);
 }
 
+gameBoard.addEventListener('click', function(event) {
+  event.target.classList.add('none');
+});
 
-buildBoard();
+buildBoard(board);
 
 
 
