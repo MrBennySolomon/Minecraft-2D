@@ -67,12 +67,10 @@ class Controller {
         e.target.classList.remove('none');
         e.target.classList.add(this.model.lastPickedTile);
 
+        this.view.lastPickedFrame.classList.remove(this.model.lastPickedTile);
+
         this.model.updateLastPickedTile();
 
-        this.view.lastPickedFrame.classList.remove('selected');
-        this.view.lastPickedFrame.classList.remove('last-picked-click');
-        
-        this.view.lastPickedFrame.classList.remove(this.view.lastPickedFrame.getAttribute('class'));
         if (this.model.lastPickedTile) {
           this.view.lastPickedFrame.classList.add(this.model.lastPickedTile);
         }else{
