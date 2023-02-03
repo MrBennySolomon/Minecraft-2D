@@ -3,6 +3,8 @@
 Minecraft is a sandbox video game initially created by Swedish programmer, Markus "Notch" Persson .
 The creative and building aspects of Minecraft enable players to build constructions out of textured cubes in a 3D procedurally generated world.
 In my version of the game, we will use a 2D pre- generated world (meaning, our world will be hardcoded).
+
+live preview at: https://minecraft-2d-benny.netlify.app/
 1. The user will have 3 types of tools:
 
 * Axe - for cutting trees
