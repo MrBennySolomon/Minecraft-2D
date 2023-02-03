@@ -50,10 +50,11 @@ class Model {
   }
 
   deleteAll () {
-    this.selectedTool = '';
-    this.lastPickedTile = '';
+    this.tilesPicked              = [];
+    this.selectedTool             = '';
+    this.lastPickedTile           = '';
     this.isLastPickedFramePressed = false;
-    this.tilesPicked = [];
+    
     localStorage.setItem('tilesPicked', JSON.stringify(this.tilesPicked));
     localStorage.setItem('selectedTool', JSON.stringify(this.selectedTool));
     localStorage.setItem('lastPickedTile', JSON.stringify(this.lastPickedTile));
