@@ -107,6 +107,14 @@ class Controller {
     while (this.view.screenGameBoard.hasChildNodes()) {
       this.view.screenGameBoard.removeChild(this.view.screenGameBoard.firstChild);
     }
+    
+    if (this.model.lastPickedTile) {
+      this.view.lastPickedFrame.classList.remove(this.model.lastPickedTile);
+    }
+    this.view.lastPickedFrame.classList.remove('last-picked-click');
+    this.view.pickaxe.classList.remove('selected');
+    this.view.shovel.classList.remove('selected');
+    this.view.axe.classList.remove('selected');
     this.model.deleteAll();
     this.buildBoard();
   }
