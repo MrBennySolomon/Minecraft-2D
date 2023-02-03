@@ -5,9 +5,9 @@ The creative and building aspects of Minecraft enable players to build construct
 In my version of the game, we will use a 2D pre- generated world (meaning, our world will be hardcoded).
 1. The user will have 3 types of tools:
 
-a. Axe - for cutting trees
-b. Pickaxe - for mining rocks   
-c. Shovel - for digging dirt
+* Axe - for cutting trees
+* Pickaxe - for mining rocks   
+* Shovel - for digging dirt
 
 2. Clicking on a tool followed by clicking on a tile in the
 world will remove the tile. (If it is of the correct type
