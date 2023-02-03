@@ -137,8 +137,8 @@ body {
 }
 
 .last-picked-click {
-  width: 5vmin;
-  height: 5vmin;
+  width: 15vmin;
+  height: 15vmin;
   background-color: white;
   border: 3px solid #555;
 }
