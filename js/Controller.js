@@ -106,7 +106,6 @@ class Controller {
     if (this.model.lastPickedTile) {
       this.view.lastPickedFrame.classList.remove(this.model.lastPickedTile);
     }
-    this.view.lastPickedFrame.classList.remove('last-picked-click');
     this.view.pickaxe.classList.remove('selected');
     this.view.shovel.classList.remove('selected');
     this.view.axe.classList.remove('selected');
