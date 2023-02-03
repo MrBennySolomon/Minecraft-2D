@@ -5,11 +5,13 @@ class Model {
   tilesPicked;
   selectedTool;
   lastPickedTile;
+  isLastPickedFramePressed;
   constructor() {
-    this.board          = JSON.parse(localStorage.getItem('board'));
-    this.tilesPicked    = JSON.parse(localStorage.getItem('tilesPicked'));
-    this.selectedTool   = JSON.parse(localStorage.getItem('selectedTool'));
-    this.lastPickedTile = JSON.parse(localStorage.getItem('lastPickedTile'));
+    this.board                    = JSON.parse(localStorage.getItem('board'));
+    this.tilesPicked              = JSON.parse(localStorage.getItem('tilesPicked'));
+    this.selectedTool             = JSON.parse(localStorage.getItem('selectedTool'));
+    this.lastPickedTile           = JSON.parse(localStorage.getItem('lastPickedTile'));
+    this.isLastPickedFramePressed = false;
   }
 
   get tilesPicked () {
@@ -47,21 +49,29 @@ class Model {
     this.lastPickedTile = type;
   }
 
-  deleteTiles () {
+  deleteAll () {
+    this.selectedTool = '';
+    this.lastPickedTile = '';
+    this.isLastPickedFramePressed = false;
     this.tilesPicked = [];
     localStorage.setItem('tilesPicked', JSON.stringify(this.tilesPicked));
+    localStorage.setItem('selectedTool', JSON.stringify(this.selectedTool));
+    localStorage.setItem('lastPickedTile', JSON.stringify(this.lastPickedTile));
   }
 
   setSelectedTool (tool) {
     this.selectedTool = tool;
-    localStorage.setItem('selectedTool', JSON.stringify(tool));
+    localStorage.setItem('selectedTool', JSON.stringify(this.selectedTool));
   }
 
-  getLastPickedTile () {
-    const returnValue = this.tilesPicked[this.tilesPicked.length - 1];
+  updateLastPickedTile () {
     this.tilesPicked.pop();
+    this.lastPickedTile = this.tilesPicked.length === 0 ? '' : this.tilesPicked[this.tilesPicked.length - 1];
     localStorage.setItem('tilesPicked', JSON.stringify(this.tilesPicked));
-    this.lastPickedTile = returnValue;
-    return returnValue;
+    localStorage.setItem('lastPickedTile', JSON.stringify(this.lastPickedTile));
+  }
+
+  setIsLastPickedFramePressed (val) {
+    this.isLastPickedFramePressed = val;
   }
 }

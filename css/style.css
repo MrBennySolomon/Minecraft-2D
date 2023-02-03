@@ -92,29 +92,29 @@ body {
 }
 
 .pickaxe {
-  width: 10vmin;
-  height: 10vmin;
+  width: 5vmin;
+  height: 5vmin;
   background: url(../img/pick_axe.png) no-repeat center center/cover;
   margin-top: 10%;
   border: 1px solid #555;
 }
 
 .shovel {
-  width: 10vmin;
-  height: 10vmin;
+  width: 5vmin;
+  height: 5vmin;
   background: url(../img/shovel.png) no-repeat center center/cover;
   border: 1px solid #555;
 }
 
 .axe {
-  width: 10vmin;
-  height: 10vmin;
+  width: 5vmin;
+  height: 5vmin;
   background: url(../img/axe.png) no-repeat center center/cover;
   border: 1px solid #555;
 }
 .last-picked {
-  width: 10vmin;
-  height: 10vmin;
+  width: 5vmin;
+  height: 5vmin;
   background-color: white;
   border: 1px solid #555;
 }
@@ -123,48 +123,50 @@ body {
 }
 
 .dirt {
-  width: 4.5vw;
-  height: 4.5vh;
+  width: 5vmin;
+  height: 5vmin;
   background: url(../img/Dirt.png) no-repeat center center/cover;
 }
 
 .grass {
-  width: 4.5vw;
-  height: 4.5vh;
+  width: 5vmin;
+  height: 5vmin;
   background: url(../img/Grass.png) no-repeat center center/cover;
 }
 
 .stone {
-  width: 4.5vw;
-  height: 4.5vh;
+  width: 5vmin;
+  height: 5vmin;
   background: url(../img/stone1.png) no-repeat center center/cover;
 }
 
 .wood {
-  width: 4.5vw;
-  height: 4.5vh;
+  width: 5vmin;
+  height: 5vmin;
   background: url(../img/wood.png) no-repeat center center/cover;
 }
 
 .leaves {
-  width: 4.5vw;
-  height: 4.5vh;
+  width: 5vmin;
+  height: 5vmin;
   background: url(../img/Leaves.png) no-repeat center center/cover;
 }
 
 .sky {
-  width: 4.5vw;
-  height: 4.5vh;
+  width: 5vmin;
+  height: 5vmin;
   background-color: #00BFFF;
 }
 
 .cloud {
-  width: 4.5vw;
-  height: 4.5vh;
+  width: 5vmin;
+  height: 5vmin;
   background-color: white;
 }
 
 .selected {
+  width: 5vmin;
+  height: 5vmin;
   background-color: #555;
 }
 
@@ -176,5 +178,8 @@ body {
 }
 
 .last-picked-click {
+  width: 5vmin;
+  height: 5vmin;
+  background-color: white;
   border: 3px solid #555;
 }

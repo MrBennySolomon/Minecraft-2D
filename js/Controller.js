@@ -36,7 +36,7 @@ class Controller {
           case 5:
             cell.classList.add('leaves');
             cell.setAttribute('type', 'leaves');
-            cell.setAttribute('tool', 'shovel');
+            cell.setAttribute('tool', 'axe');
             break;
           case 6:
             cell.classList.add('sky');
@@ -60,34 +60,60 @@ class Controller {
   screenTileWasClicked (e) {
     const tool = e.target.getAttribute('tool');
     const type = e.target.getAttribute('type');
+    
+    if (this.model.selectedTool === '') {
+      //add tiles in the world
+      if (this.model.lastPickedTile) {
+        e.target.classList.remove('none');
+        e.target.classList.add(this.model.lastPickedTile);
 
-    if (tool !== 'none' && tool === this.model.selectedTool) {
-      this.model.pushTiles(type);
-      this.view.lastPickedFrame.classList.remove(this.view.lastPickedFrame.getAttribute('class'));
+        this.model.updateLastPickedTile();
+
+        this.view.lastPickedFrame.classList.remove('selected');
+        this.view.lastPickedFrame.classList.remove('last-picked-click');
+        
+        this.view.lastPickedFrame.classList.remove(this.view.lastPickedFrame.getAttribute('class'));
+        if (this.model.lastPickedTile) {
+          this.view.lastPickedFrame.classList.add(this.model.lastPickedTile);
+        }else{
+          this.view.lastPickedFrame.classList.add('last-picked');
+        }
+      }
+    }else if (tool === this.model.selectedTool){
+      //remove tiles in the world
+      if (this.model.lastPickedTile) {
+        this.view.lastPickedFrame.classList.remove(this.model.lastPickedTile);
+      }
       this.view.lastPickedFrame.classList.add(e.target.getAttribute('class'));
+      this.model.pushTiles(type);
       e.target.setAttribute('class', 'none');
     }
   }
 
   lastPickedFrameWasClicked(e) {
+    this.model.setSelectedTool('');
+    this.model.setIsLastPickedFramePressed(false);
     this.view.axe.classList.remove('selected');
     this.view.shovel.classList.remove('selected');
     this.view.pickaxe.classList.remove('selected');
+    this.view.lastPickedFrame.classList.remove('last-picked');
+    this.view.lastPickedFrame.classList.add('selected');
     this.view.lastPickedFrame.classList.add('last-picked-click');
-
-    const lastPickedTileType = this.model.getLastPickedTile();
-
+    //this.model.updateLastPickedTile();
+    //this.view.lastPickedFrame.classList.add(this.model.updateLastPickedTile());
   }
 
   btnRestWasClicked (e) {
     while (this.view.screenGameBoard.hasChildNodes()) {
       this.view.screenGameBoard.removeChild(this.view.screenGameBoard.firstChild);
     }
-    this.model.deleteTiles()
+    this.model.deleteAll();
     this.buildBoard();
   }
 
   axeWasClicked (e) {
+    this.model.setIsLastPickedFramePressed(false);
+    this.view.lastPickedFrame.classList.add('last-picked');
     this.view.lastPickedFrame.classList.remove('last-picked-click');
     this.view.pickaxe.classList.remove('selected');
     this.view.shovel.classList.remove('selected');
@@ -96,6 +122,8 @@ class Controller {
   }
 
   shovelWasClicked (e) {
+    this.model.setIsLastPickedFramePressed(false);
+    this.view.lastPickedFrame.classList.add('last-picked');
     this.view.lastPickedFrame.classList.remove('last-picked-click');
     this.view.pickaxe.classList.remove('selected');
     this.view.axe.classList.remove('selected');
@@ -104,6 +132,8 @@ class Controller {
   }
 
   pickaxeWasClicked (e) {
+    this.model.setIsLastPickedFramePressed(false);
+    this.view.lastPickedFrame.classList.add('last-picked');
     this.view.lastPickedFrame.classList.remove('last-picked-click');
     this.view.axe.classList.remove('selected');
     this.view.shovel.classList.remove('selected');
