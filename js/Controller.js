@@ -95,10 +95,7 @@ class Controller {
     this.view.shovel.classList.remove('selected');
     this.view.pickaxe.classList.remove('selected');
     this.view.lastPickedFrame.classList.remove('last-picked');
-    this.view.lastPickedFrame.classList.add('selected');
     this.view.lastPickedFrame.classList.add('last-picked-click');
-    //this.model.updateLastPickedTile();
-    //this.view.lastPickedFrame.classList.add(this.model.updateLastPickedTile());
   }
 
   btnRestWasClicked (e) {
