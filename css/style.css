@@ -174,3 +174,7 @@ body {
   background-color: #555;
   color: white;
 }
+
+.last-picked-click {
+  border: 3px solid #555;
+}
