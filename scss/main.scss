@@ -1,147 +1,4 @@
 
-
-%flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-%flex-space-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-%flex-start-direction-column {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-}
-
-%grid {
-  display: grid;
-  grid-template-rows: repeat(20, 1fr);
-  grid-template-columns: repeat(20, 1fr);
-}
-
-%align-self-start {
-  align-self: flex-start;
-}
-
-%full-size {
-  width: 100vw;
-  height: 100vh;
-}
-
-%menu-cell-size {
-  width: 15vmin;
-  height: 15vmin;
-}
-
-%game-board-cell-size {
-  width: 10%vmin;
-  height: 10%vmin;
-}
-
-%game-board-size {
-  width: 85%;
-  height: 100%;
-}
-
-%side-menu-size {
-  height: 100%;
-  width: 15vw;
-}
-
-%reset {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-%normalize {
-  font-size: 62.5%;
-  width: 100vw;
-  height: 100vh;
-}
-
-%side-menu-gap {
-  gap: 2rem;
-}
-
-%side-menu-border {
-  border: 1px solid #555;
-}
-
-%side-menu-background {
-  background-color: white;
-}
-
-%grey-background {
-  background-color: #555;
-}
-
-%font-color {
-  color: white;
-}
-
-%pickaxe-background {
-  background: url(../img/pick_axe.png) no-repeat center center/cover;
-}
-
-%shovel-background {
-  background: url(../img/shovel.png) no-repeat center center/cover;
-}
-
-%axe-background {
-  background: url(../img/axe.png) no-repeat center center/cover;
-}
-
-%light-border {
-  border: 1px solid #555;
-}
-
-%light-background {
-  background-color: white;
-}
-
-%side-menu-first-item-margin {
-  margin-top: 10%;
-}
-
-%sky-background {
-  background-color: #00BFFF;
-}
-
-%dirt-background {
-  background: url(../img/Dirt.png) no-repeat center center/cover;
-}
-
-%grass-background {
-  background: url(../img/Grass.png) no-repeat center center/cover;
-}
-
-%stone-background {
-  background: url(../img/stone1.png) no-repeat center center/cover;
-}
-
-%wood-background {
-  background: url(../img/wood.png) no-repeat center center/cover;
-}
-
-%leaves-background {
-  background: url(../img/Leaves.png) no-repeat center center/cover;
-}
-
-%cloud-background {
-  background-color: white;
-}
-
-%big-border {
-  border: 3px solid #555;
-}
-
 * {
   @extend %reset;
 }
@@ -301,4 +158,146 @@ body {
       }
     }
   }
+}
+
+%flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%flex-start-direction-column {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+%grid {
+  display: grid;
+  grid-template-rows: repeat(20, 1fr);
+  grid-template-columns: repeat(20, 1fr);
+}
+
+%align-self-start {
+  align-self: flex-start;
+}
+
+%full-size {
+  width: 100vw;
+  height: 100vh;
+}
+
+%menu-cell-size {
+  width: 15vmin;
+  height: 15vmin;
+}
+
+%game-board-cell-size {
+  width: 10%vmin;
+  height: 10%vmin;
+}
+
+%game-board-size {
+  width: 85%;
+  height: 100%;
+}
+
+%side-menu-size {
+  height: 100%;
+  width: 15vw;
+}
+
+%reset {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+%normalize {
+  font-size: 62.5%;
+  width: 100vw;
+  height: 100vh;
+}
+
+%side-menu-gap {
+  gap: 2rem;
+}
+
+%side-menu-border {
+  border: 1px solid #555;
+}
+
+%side-menu-background {
+  background-color: white;
+}
+
+%grey-background {
+  background-color: #555;
+}
+
+%font-color {
+  color: white;
+}
+
+%pickaxe-background {
+  background: url(../img/pick_axe.png) no-repeat center center/cover;
+}
+
+%shovel-background {
+  background: url(../img/shovel.png) no-repeat center center/cover;
+}
+
+%axe-background {
+  background: url(../img/axe.png) no-repeat center center/cover;
+}
+
+%light-border {
+  border: 1px solid #555;
+}
+
+%light-background {
+  background-color: white;
+}
+
+%side-menu-first-item-margin {
+  margin-top: 10%;
+}
+
+%sky-background {
+  background-color: #00BFFF;
+}
+
+%dirt-background {
+  background: url(../img/Dirt.png) no-repeat center center/cover;
+}
+
+%grass-background {
+  background: url(../img/Grass.png) no-repeat center center/cover;
+}
+
+%stone-background {
+  background: url(../img/stone1.png) no-repeat center center/cover;
+}
+
+%wood-background {
+  background: url(../img/wood.png) no-repeat center center/cover;
+}
+
+%leaves-background {
+  background: url(../img/Leaves.png) no-repeat center center/cover;
+}
+
+%cloud-background {
+  background-color: white;
+}
+
+%big-border {
+  border: 3px solid #555;
 }
