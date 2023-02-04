@@ -89,6 +89,7 @@ class Controller {
       this.model.pushTiles(type);
 
       (e.target as HTMLDivElement).setAttribute('class', 'none');
+      (e.target as HTMLDivElement).setAttribute('tool', 'none');
     }
   }
 
@@ -138,5 +139,20 @@ class Controller {
     this.view.removeClassShovel('selected');
     this.view.addClassPickaxe('selected');
     this.model.setSelectedTool('pickaxe');
+  }
+
+    public getTool(tile: string) : string {
+      switch (tile) {
+        case 'dirt':
+        case 'grass':
+          return 'shovel';
+        case 'wood':
+        case 'leaves':
+          return 'axe';
+        case 'stone':
+          return 'pickaxe';
+        default:
+          return 'none';
+    }
   }
 }
