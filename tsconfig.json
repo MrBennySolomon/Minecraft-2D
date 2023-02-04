@@ -4,5 +4,6 @@
     "module": "commonjs",
     "sourceMap": true,
     "outDir": "out"
+    // tsc --target <fileName>.ts
   }
 }
