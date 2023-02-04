@@ -1,0 +1,23 @@
+{
+  "name": "minecraft-2d",
+  "version": "1.0.0",
+  "description": "Minecraft is a sandbox video game initially created by Swedish programmer, Markus \"Notch\" Persson . The creative and building aspects of Minecraft enable players to build constructions out of textured cubes in a 3D procedurally generated world.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrBennySolomon/Minecraft-2D.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrBennySolomon/Minecraft-2D/issues"
+  },
+  "homepage": "https://github.com/MrBennySolomon/Minecraft-2D#readme",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
