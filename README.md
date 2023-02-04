@@ -1,4 +1,4 @@
-# Minecraft-2D
+# <font color="green">Minecraft-2D</font>
 
 Minecraft is a sandbox video game initially created by Swedish programmer, Markus "Notch" Persson .
 The creative and building aspects of Minecraft enable players to build constructions out of textured cubes in a 3D procedurally generated world.
