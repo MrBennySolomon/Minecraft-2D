@@ -1,3 +1,42 @@
+body .game {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+body .game .side-menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column; }
+
+body .game .game-board {
+  display: grid;
+  grid-template-rows: repeat(20, 1fr);
+  grid-template-columns: repeat(20, 1fr); }
+
+body .game .game-board {
+  align-self: flex-start; }
+
+body .game {
+  width: 100vw;
+  height: 100vh; }
+
+body .game .side-menu .reset, body .game .side-menu .pickaxe, body .game .side-menu .shovel, body .game .side-menu .axe, body .game .side-menu .last-picked, body .game .side-menu .last-picked-click, body .game .game-board .last-picked-click {
+  width: 15vmin;
+  height: 15vmin; }
+
+body .game .side-menu .dirt, body .game .side-menu .grass, body .game .side-menu .stone, body .game .side-menu .wood, body .game .side-menu .leaves, body .game .side-menu .sky, body .game .side-menu .cloud, body .game .side-menu .selected, body .game .game-board .dirt, body .game .game-board .grass, body .game .game-board .stone, body .game .game-board .wood, body .game .game-board .leaves, body .game .game-board .sky, body .game .game-board .cloud, body .game .game-board .selected {
+  width: 10%vmin;
+  height: 10%vmin; }
+
+body .game .game-board {
+  width: 85%;
+  height: 100%; }
+
+body .game .side-menu {
+  height: 100%;
+  width: 15vw; }
+
 * {
   margin: 0;
   padding: 0;
@@ -7,132 +46,60 @@ body {
   font-size: 62.5%;
   width: 100vw;
   height: 100vh; }
-  body .game {
-    order: 1px solid black;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    body .game .side-menu {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      flex-direction: column;
-      gap: 2rem;
-      height: 100%;
-      width: 15vw;
-      border: 1px solid #555;
-      background-color: white;
-      margin-right: 0px; }
-      body .game .side-menu .reset {
-        width: 15vmin;
-        height: 15vmin;
-        background-color: #555;
-        color: white; }
-      body .game .side-menu .pickaxe {
-        width: 15vmin;
-        height: 15vmin;
-        background: url(../img/pick_axe.png) no-repeat center center/cover;
-        margin-top: 10%;
-        border: 1px solid #555; }
-      body .game .side-menu .shovel {
-        width: 15vmin;
-        height: 15vmin;
-        background: url(../img/shovel.png) no-repeat center center/cover;
-        border: 1px solid #555; }
-      body .game .side-menu .axe {
-        width: 15vmin;
-        height: 15vmin;
-        background: url(../img/axe.png) no-repeat center center/cover;
-        border: 1px solid #555; }
-      body .game .side-menu .last-picked {
-        width: 15vmin;
-        height: 15vmin;
-        background-color: white;
-        border: 1px solid #555; }
-      body .game .side-menu .none {
-        background-color: #00BFFF; }
-      body .game .side-menu .dirt {
-        width: 10%vmin;
-        height: 10%vmin;
-        background: url(../img/Dirt.png) no-repeat center center/cover; }
-      body .game .side-menu .grass {
-        width: 10%vmin;
-        height: 10%vmin;
-        background: url(../img/Grass.png) no-repeat center center/cover; }
-      body .game .side-menu .stone {
-        width: 10%vmin;
-        height: 10%vmin;
-        background: url(../img/stone1.png) no-repeat center center/cover; }
-      body .game .side-menu .wood {
-        width: 10%vmin;
-        height: 10%vmin;
-        background: url(../img/wood.png) no-repeat center center/cover; }
-      body .game .side-menu .leaves {
-        width: 10%vmin;
-        height: 10%vmin;
-        background: url(../img/Leaves.png) no-repeat center center/cover; }
-      body .game .side-menu .sky {
-        width: 10%vmin;
-        height: 10%vmin;
-        background-color: #00BFFF; }
-      body .game .side-menu .cloud {
-        width: 10%vmin;
-        height: 10%vmin;
-        background-color: white; }
-      body .game .side-menu .selected {
-        width: 10%vmin;
-        height: 10%vmin;
-        background-color: #555; }
-      body .game .side-menu .last-picked-click {
-        width: 15vmin;
-        height: 15vmin;
-        background-color: white;
-        border: 3px solid #555; }
-    body .game .game-board {
-      width: 85%;
-      height: 100%;
-      display: grid;
-      grid-template-rows: repeat(20, 1fr);
-      grid-template-columns: repeat(20, 1fr);
-      align-self: flex-start; }
-      body .game .game-board .none {
-        background-color: #00BFFF; }
-      body .game .game-board .dirt {
-        width: 10%vmin;
-        height: 10%vmin;
-        background: url(../img/Dirt.png) no-repeat center center/cover; }
-      body .game .game-board .grass {
-        width: 10%vmin;
-        height: 10%vmin;
-        background: url(../img/Grass.png) no-repeat center center/cover; }
-      body .game .game-board .stone {
-        width: 10%vmin;
-        height: 10%vmin;
-        background: url(../img/stone1.png) no-repeat center center/cover; }
-      body .game .game-board .wood {
-        width: 10%vmin;
-        height: 10%vmin;
-        background: url(../img/wood.png) no-repeat center center/cover; }
-      body .game .game-board .leaves {
-        width: 10%vmin;
-        height: 10%vmin;
-        background: url(../img/Leaves.png) no-repeat center center/cover; }
-      body .game .game-board .sky {
-        width: 10%vmin;
-        height: 10%vmin;
-        background-color: #00BFFF; }
-      body .game .game-board .cloud {
-        width: 10%vmin;
-        height: 10%vmin;
-        background-color: white; }
-      body .game .game-board .selected {
-        width: 10%vmin;
-        height: 10%vmin;
-        background-color: #555; }
-      body .game .game-board .last-picked-click {
-        width: 15vmin;
-        height: 15vmin;
-        background-color: white;
-        border: 3px solid #555; }
+
+body .game .side-menu {
+  gap: 2rem; }
+
+body .game .side-menu {
+  border: 1px solid #555; }
+
+body .game .side-menu {
+  background-color: white; }
+
+body .game .side-menu .reset, body .game .side-menu .selected, body .game .game-board .selected {
+  background-color: #555; }
+
+body .game .side-menu .reset {
+  color: white; }
+
+body .game .side-menu .pickaxe {
+  background: url(../img/pick_axe.png) no-repeat center center/cover; }
+
+body .game .side-menu .shovel {
+  background: url(../img/shovel.png) no-repeat center center/cover; }
+
+body .game .side-menu .axe {
+  background: url(../img/axe.png) no-repeat center center/cover; }
+
+body .game .side-menu .pickaxe, body .game .side-menu .shovel, body .game .side-menu .axe, body .game .side-menu .last-picked {
+  border: 1px solid #555; }
+
+body .game .side-menu .last-picked, body .game .side-menu .last-picked-click, body .game .game-board .last-picked-click {
+  background-color: white; }
+
+body .game .side-menu .pickaxe {
+  margin-top: 10%; }
+
+body .game .side-menu .none, body .game .side-menu .sky, body .game .game-board .none, body .game .game-board .sky {
+  background-color: #00BFFF; }
+
+body .game .side-menu .dirt, body .game .game-board .dirt {
+  background: url(../img/Dirt.png) no-repeat center center/cover; }
+
+body .game .side-menu .grass, body .game .game-board .grass {
+  background: url(../img/Grass.png) no-repeat center center/cover; }
+
+body .game .side-menu .stone, body .game .game-board .stone {
+  background: url(../img/stone1.png) no-repeat center center/cover; }
+
+body .game .side-menu .wood, body .game .game-board .wood {
+  background: url(../img/wood.png) no-repeat center center/cover; }
+
+body .game .side-menu .leaves, body .game .game-board .leaves {
+  background: url(../img/Leaves.png) no-repeat center center/cover; }
+
+body .game .side-menu .cloud, body .game .game-board .cloud {
+  background-color: white; }
+
+body .game .side-menu .selected, body .game .side-menu .last-picked-click, body .game .game-board .selected, body .game .game-board .last-picked-click {
+  border: 3px solid #555; }
