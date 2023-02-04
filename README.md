@@ -1,5 +1,4 @@
-- ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) `#f03c15`
-# <font color="lightblue">Minecraft-2D</font>
+- ![#f03c15] # Minecraft-2D
 
 Minecraft is a sandbox video game initially created by Swedish programmer, Markus "Notch" Persson .
 The creative and building aspects of Minecraft enable players to build constructions out of textured cubes in a 3D procedurally generated world.
