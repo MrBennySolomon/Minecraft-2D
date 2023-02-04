@@ -1,18 +1,18 @@
-var Controller = /** @class */ (function () {
-    function Controller(model, view) {
+class Controller {
+    constructor(model, view) {
         this.view = view;
         this.model = model;
     }
-    Controller.prototype.getView = function () {
+    getView() {
         return this.view;
-    };
-    Controller.prototype.getModel = function () {
+    }
+    getModel() {
         return this.model;
-    };
-    Controller.prototype.buildBoard = function () {
-        for (var i = 0; i < this.model.getBoardRows(); i++) {
-            for (var j = 0; j < this.model.getBoardCols(); j++) {
-                var cell = document.createElement('div');
+    }
+    buildBoard() {
+        for (let i = 0; i < this.model.getBoardRows(); i++) {
+            for (let j = 0; j < this.model.getBoardCols(); j++) {
+                const cell = document.createElement('div');
                 switch (this.model.getBoardIndex(i, j)) {
                     case 1:
                         cell.classList.add('dirt');
@@ -56,10 +56,10 @@ var Controller = /** @class */ (function () {
                 this.view.appendChild(cell);
             }
         }
-    };
-    Controller.prototype.screenTileWasClicked = function (e) {
-        var tool = e.target.getAttribute('tool');
-        var type = e.target.getAttribute('type');
+    }
+    screenTileWasClicked(e) {
+        const tool = e.target.getAttribute('tool');
+        const type = e.target.getAttribute('type');
         if (this.model.getSelectedTool() === '') {
             //add tiles in the world
             if (this.model.getLastPickedTile()) {
@@ -81,16 +81,16 @@ var Controller = /** @class */ (function () {
             this.model.pushTiles(type);
             e.target.setAttribute('class', 'none');
         }
-    };
-    Controller.prototype.lastPickedFrameWasClicked = function (e) {
+    }
+    lastPickedFrameWasClicked(e) {
         this.model.setSelectedTool('');
         this.view.removeClassAxe('selected');
         this.view.removeClassShovel('selected');
         this.view.removeClassPickaxe('selected');
         this.view.removeClassLastPickedFrame('last-picked');
         this.view.addClassLastPickedFrame('last-picked-click');
-    };
-    Controller.prototype.btnRestWasClicked = function (e) {
+    }
+    btnRestWasClicked(e) {
         while (this.view.getScreenGameBoard().hasChildNodes())
             this.view.removeFirstChildScreenGameBoard();
         if (this.model.getLastPickedTile())
@@ -100,30 +100,29 @@ var Controller = /** @class */ (function () {
         this.view.removeClassAxe('selected');
         this.model.deleteAll();
         this.buildBoard();
-    };
-    Controller.prototype.axeWasClicked = function (e) {
+    }
+    axeWasClicked(e) {
         this.view.addClassLastPickedFrame('last-picked');
         this.view.removeClassLastPickedFrame('last-picked-click');
         this.view.removeClassPickaxe('selected');
         this.view.removeClassShovel('selected');
         this.view.addClassAxe('selected');
         this.model.setSelectedTool('axe');
-    };
-    Controller.prototype.shovelWasClicked = function (e) {
+    }
+    shovelWasClicked(e) {
         this.view.addClassLastPickedFrame('last-picked');
         this.view.removeClassLastPickedFrame('last-picked-click');
         this.view.removeClassPickaxe('selected');
         this.view.removeClassAxe('selected');
         this.view.addClassShovel('selected');
         this.model.setSelectedTool('shovel');
-    };
-    Controller.prototype.pickaxeWasClicked = function (e) {
+    }
+    pickaxeWasClicked(e) {
         this.view.addClassLastPickedFrame('last-picked');
         this.view.removeClassLastPickedFrame('last-picked-click');
         this.view.removeClassAxe('selected');
         this.view.removeClassShovel('selected');
         this.view.addClassPickaxe('selected');
         this.model.setSelectedTool('pickaxe');
-    };
-    return Controller;
-}());
+    }
+}

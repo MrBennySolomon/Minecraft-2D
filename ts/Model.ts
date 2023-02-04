@@ -31,6 +31,7 @@ class Model {
 
   public setSelectedTool (tool: string) : void {
     this.selectedTool = tool;
+    localStorage.setItem('selectedTool', JSON.stringify(this.selectedTool));
   }
 
   public setTilesPicked (tiles: Array<string>) : void {

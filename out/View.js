@@ -1,5 +1,5 @@
-var View = /** @class */ (function () {
-    function View() {
+class View {
+    constructor() {
         this.axe = document.querySelector('.axe');
         this.shovel = document.querySelector('.shovel');
         this.pickaxe = document.querySelector('.pickaxe');
@@ -7,53 +7,52 @@ var View = /** @class */ (function () {
         this.lastPickedFrame = document.querySelector('.last-picked');
         this.screenGameBoard = document.querySelector('body .game #game-board');
     }
-    View.prototype.getLastPickedFrame = function () {
+    getLastPickedFrame() {
         return this.lastPickedFrame;
-    };
-    View.prototype.getAxe = function () {
+    }
+    getAxe() {
         return this.axe;
-    };
-    View.prototype.getShovel = function () {
+    }
+    getShovel() {
         return this.shovel;
-    };
-    View.prototype.getPickaxe = function () {
+    }
+    getPickaxe() {
         return this.pickaxe;
-    };
-    View.prototype.getBtnReset = function () {
+    }
+    getBtnReset() {
         return this.btnReset;
-    };
-    View.prototype.getScreenGameBoard = function () {
+    }
+    getScreenGameBoard() {
         return this.screenGameBoard;
-    };
-    View.prototype.appendChild = function (cell) {
+    }
+    appendChild(cell) {
         this.screenGameBoard.appendChild(cell);
-    };
-    View.prototype.removeClassAxe = function (str) {
+    }
+    removeClassAxe(str) {
         this.axe.classList.remove(str);
-    };
-    View.prototype.removeClassPickaxe = function (str) {
+    }
+    removeClassPickaxe(str) {
         this.pickaxe.classList.remove(str);
-    };
-    View.prototype.removeClassShovel = function (str) {
+    }
+    removeClassShovel(str) {
         this.shovel.classList.remove(str);
-    };
-    View.prototype.removeClassLastPickedFrame = function (str) {
+    }
+    removeClassLastPickedFrame(str) {
         this.lastPickedFrame.classList.remove(str);
-    };
-    View.prototype.addClassAxe = function (str) {
+    }
+    addClassAxe(str) {
         this.axe.classList.add(str);
-    };
-    View.prototype.addClassPickaxe = function (str) {
+    }
+    addClassPickaxe(str) {
         this.pickaxe.classList.add(str);
-    };
-    View.prototype.addClassShovel = function (str) {
+    }
+    addClassShovel(str) {
         this.shovel.classList.add(str);
-    };
-    View.prototype.addClassLastPickedFrame = function (str) {
+    }
+    addClassLastPickedFrame(str) {
         this.lastPickedFrame.classList.add(str);
-    };
-    View.prototype.removeFirstChildScreenGameBoard = function () {
+    }
+    removeFirstChildScreenGameBoard() {
         this.screenGameBoard.removeChild(this.screenGameBoard.firstChild);
-    };
-    return View;
-}());
+    }
+}

@@ -1,8 +1,8 @@
-var buttonStart = document.getElementById('btn-start');
+const buttonStart = document.getElementById('btn-start');
 buttonStart.addEventListener('click', function (e) {
     location.href = '../html/game.html';
 });
-var board = [
+const board = [
     [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6],
     [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6],
     [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6],
@@ -24,9 +24,9 @@ var board = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 ];
-var array = new Array();
-var tool = 'none';
-var lastPickedTile = '';
+const array = new Array();
+const tool = 'none';
+const lastPickedTile = '';
 localStorage.setItem('board', JSON.stringify(board));
 localStorage.setItem('tilesPicked', JSON.stringify(array));
 localStorage.setItem('selectedTool', JSON.stringify(tool));

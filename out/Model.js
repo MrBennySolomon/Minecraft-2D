@@ -1,56 +1,56 @@
-var Model = /** @class */ (function () {
-    function Model() {
+class Model {
+    constructor() {
         this.board = JSON.parse(localStorage.getItem('board'));
         this.tilesPicked = JSON.parse(localStorage.getItem('tilesPicked'));
         this.selectedTool = JSON.parse(localStorage.getItem('selectedTool'));
         this.lastPickedTile = JSON.parse(localStorage.getItem('lastPickedTile'));
     }
-    Model.prototype.getLastPickedTile = function () {
+    getLastPickedTile() {
         return this.lastPickedTile;
-    };
-    Model.prototype.getTilesPicked = function () {
+    }
+    getTilesPicked() {
         return this.tilesPicked;
-    };
-    Model.prototype.getSelectedTool = function () {
+    }
+    getSelectedTool() {
         return this.selectedTool;
-    };
-    Model.prototype.setLastPickedTile = function (value) {
+    }
+    setLastPickedTile(value) {
         this.lastPickedTile = value;
-    };
-    Model.prototype.setSelectedTool = function (tool) {
+    }
+    setSelectedTool(tool) {
         this.selectedTool = tool;
-    };
-    Model.prototype.setTilesPicked = function (tiles) {
+        localStorage.setItem('selectedTool', JSON.stringify(this.selectedTool));
+    }
+    setTilesPicked(tiles) {
         this.tilesPicked = tiles;
-    };
-    Model.prototype.getBoardRows = function () {
+    }
+    getBoardRows() {
         return this.board.length;
-    };
-    Model.prototype.getBoardCols = function () {
+    }
+    getBoardCols() {
         return this.board[0].length;
-    };
-    Model.prototype.getBoardIndex = function (i, j) {
+    }
+    getBoardIndex(i, j) {
         return this.board[i][j];
-    };
-    Model.prototype.pushTiles = function (type) {
+    }
+    pushTiles(type) {
         this.tilesPicked.push(type);
         localStorage.setItem('tilesPicked', JSON.stringify(this.tilesPicked));
         localStorage.setItem('lastPickedTile', JSON.stringify(this.tilesPicked[this.tilesPicked.length - 1]));
         this.lastPickedTile = type;
-    };
-    Model.prototype.deleteAll = function () {
+    }
+    deleteAll() {
         this.tilesPicked = [];
         this.selectedTool = '';
         this.lastPickedTile = '';
         localStorage.setItem('tilesPicked', JSON.stringify(this.tilesPicked));
         localStorage.setItem('selectedTool', JSON.stringify(this.selectedTool));
         localStorage.setItem('lastPickedTile', JSON.stringify(this.lastPickedTile));
-    };
-    Model.prototype.updateLastPickedTile = function () {
+    }
+    updateLastPickedTile() {
         this.tilesPicked.pop();
         this.lastPickedTile = this.tilesPicked.length === 0 ? '' : this.tilesPicked[this.tilesPicked.length - 1];
         localStorage.setItem('tilesPicked', JSON.stringify(this.tilesPicked));
         localStorage.setItem('lastPickedTile', JSON.stringify(this.lastPickedTile));
-    };
-    return Model;
-}());
+    }
+}

@@ -1,6 +1,6 @@
-var view = new View();
-var model = new Model();
-var controller = new Controller(model, view);
+const view = new View();
+const model = new Model();
+const controller = new Controller(model, view);
 controller.buildBoard();
 controller.getView().getScreenGameBoard().addEventListener('click', function (e) { controller.screenTileWasClicked(e); });
 controller.getView().getLastPickedFrame().addEventListener('click', function (e) { controller.lastPickedFrameWasClicked(e); });
