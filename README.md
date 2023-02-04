@@ -7,7 +7,7 @@ In my version of the game, I used a 2D pre - generated world.
 
 ### using HTML, SCSS, JavaScript, TypeScript localStorage and MVC design pattern.
 
-### live preview at: https://minecraft-2d-benny.netlify.app/
+* live preview at: https://minecraft-2d-benny.netlify.app/
 
 1. The user will have 3 types of tools:
 
