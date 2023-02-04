@@ -80,6 +80,7 @@ class Controller {
             this.view.getLastPickedFrame().classList.add(e.target.getAttribute('class'));
             this.model.pushTiles(type);
             e.target.setAttribute('class', 'none');
+            e.target.setAttribute('tool', 'none');
         }
     }
     lastPickedFrameWasClicked(e) {
@@ -124,5 +125,19 @@ class Controller {
         this.view.removeClassShovel('selected');
         this.view.addClassPickaxe('selected');
         this.model.setSelectedTool('pickaxe');
+    }
+    getTool(tile) {
+        switch (tile) {
+            case 'dirt':
+            case 'grass':
+                return 'shovel';
+            case 'wood':
+            case 'leaves':
+                return 'axe';
+            case 'stone':
+                return 'pickaxe';
+            default:
+                return 'none';
+        }
     }
 }
