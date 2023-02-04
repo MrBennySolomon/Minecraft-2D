@@ -1,4 +1,4 @@
-- ![#1589F0](Minecraft-2D)
+# Minecraft-2D
 
 Minecraft is a sandbox video game initially created by Swedish programmer, Markus "Notch" Persson .
 The creative and building aspects of Minecraft enable players to build constructions out of textured cubes in a 3D procedurally generated world.
