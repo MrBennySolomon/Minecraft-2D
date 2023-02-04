@@ -5,7 +5,7 @@ The creative and building aspects of Minecraft enable players to build construct
 
 In my version of the game, I used a 2D pre - generated world.
 
-using localStorage and MVC design pattern.
+using HTML, CSS, JavaScript, localStorage and MVC design pattern.
 
 live preview at: https://minecraft-2d-benny.netlify.app/
 
