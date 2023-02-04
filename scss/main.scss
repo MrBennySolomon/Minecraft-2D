@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  width: 100vw;
+  height: 100vh;
+
+  .game {
+    order: 1px solid black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .side-menu {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      gap: 2rem;
+      height: 100%;
+      width: 15vw;
+      border: 1px solid #555;
+      background-color: white;
+      margin-right: 0px;
+
+      .reset {
+        width: 15vmin;
+        height: 15vmin;
+        background-color: #555;
+        color: white;
+      }
+
+      .pickaxe {
+        width: 15vmin;
+        height: 15vmin;
+        background: url(../img/pick_axe.png) no-repeat center center/cover;
+        margin-top: 10%;
+        border: 1px solid #555;
+      }
+  
+      .shovel {
+        width: 15vmin;
+        height: 15vmin;
+        background: url(../img/shovel.png) no-repeat center center/cover;
+        border: 1px solid #555;
+      }
+  
+      .axe {
+        width: 15vmin;
+        height: 15vmin;
+        background: url(../img/axe.png) no-repeat center center/cover;
+        border: 1px solid #555;
+      }
+  
+      .last-picked {
+        width: 15vmin;
+        height: 15vmin;
+        background-color: white;
+        border: 1px solid #555;
+      }
+
+      .none {
+        background-color: #00BFFF;
+      }
+
+      .dirt {
+        width: 10%vmin;
+        height: 10%vmin;
+        background: url(../img/Dirt.png) no-repeat center center/cover;
+      }
+
+      .grass {
+        width: 10%vmin;
+        height: 10%vmin;
+        background: url(../img/Grass.png) no-repeat center center/cover;
+      }
+
+      .stone {
+        width: 10%vmin;
+        height: 10%vmin;
+        background: url(../img/stone1.png) no-repeat center center/cover;
+      }
+
+      .wood {
+        width: 10%vmin;
+        height: 10%vmin;
+        background: url(../img/wood.png) no-repeat center center/cover;
+      }
+
+      .leaves {
+        width: 10%vmin;
+        height: 10%vmin;
+        background: url(../img/Leaves.png) no-repeat center center/cover;
+      }
+
+      .sky {
+        width: 10%vmin;
+        height: 10%vmin;
+        background-color: #00BFFF;
+      }
+
+      .cloud {
+        width: 10%vmin;
+        height: 10%vmin;
+        background-color: white;
+      }
+
+      .selected {
+        width: 10%vmin;
+        height: 10%vmin;
+        background-color: #555;
+      }
+
+      .last-picked-click {
+        width: 15vmin;
+        height: 15vmin;
+        background-color: white;
+        border: 3px solid #555;
+      }
+    }
+
+    .game-board {
+      width: 85%;
+      height: 100%;
+      display: grid;
+      grid-template-rows: repeat(20, 1fr);
+      grid-template-columns: repeat(20, 1fr);
+      align-self: flex-start;
+
+      .none {
+        background-color: #00BFFF;
+      }
+
+      .dirt {
+        width: 10%vmin;
+        height: 10%vmin;
+        background: url(../img/Dirt.png) no-repeat center center/cover;
+      }
+
+      .grass {
+        width: 10%vmin;
+        height: 10%vmin;
+        background: url(../img/Grass.png) no-repeat center center/cover;
+      }
+
+      .stone {
+        width: 10%vmin;
+        height: 10%vmin;
+        background: url(../img/stone1.png) no-repeat center center/cover;
+      }
+
+      .wood {
+        width: 10%vmin;
+        height: 10%vmin;
+        background: url(../img/wood.png) no-repeat center center/cover;
+      }
+
+      .leaves {
+        width: 10%vmin;
+        height: 10%vmin;
+        background: url(../img/Leaves.png) no-repeat center center/cover;
+      }
+
+      .sky {
+        width: 10%vmin;
+        height: 10%vmin;
+        background-color: #00BFFF;
+      }
+
+      .cloud {
+        width: 10%vmin;
+        height: 10%vmin;
+        background-color: white;
+      }
+
+      .selected {
+        width: 10%vmin;
+        height: 10%vmin;
+        background-color: #555;
+      }
+
+      .last-picked-click {
+        width: 15vmin;
+        height: 15vmin;
+        background-color: white;
+        border: 3px solid #555;
+      }
+    }
+  }
+}

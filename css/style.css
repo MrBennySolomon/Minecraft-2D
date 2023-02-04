@@ -10,15 +10,6 @@ body {
   height: 100vh;
 }
 
-.game {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  width: 100vw;
-  height: 100vh;
-}
-
 .side-menu {
   display: flex;
   justify-content: flex-start;
